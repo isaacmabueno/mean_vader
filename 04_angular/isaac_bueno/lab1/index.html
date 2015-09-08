@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="person">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src = "app.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <header ng-controller="HeaderController">
+      <h1> {{ title }}</h1>
+      <h3> {{ tagLine }}</h3>
+    </header>
+    <div ng-controller="MessageController">
+      <article ng-repeat="message in messages">
+      TRAITS: <h3> {{ message.Person }} </h3><br>
+      <center>
+      <p>{{ message.Birthday | date}}</p><br>
+      <p>{{message.TeachingExperience}}</p><br>
+      <p>{{message.Interests}}</p><br>
+      <p>{{message.NeedsAHaircut}}</p><br>
+      <p>{{message.FavoriteBand}}</p>
+    </center>
+    </article>
+  </div>
+  </body>
+</html>
